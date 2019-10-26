@@ -1,9 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
+
 html{
     box-sizing: border-box;
+    height: 100vh;
 }
 
 body{
     box-sizing: inherit;
+    font-family: 'Staatliches';
+    color: white;
+    letter-spacing: 2px;
+    height: inherit;
 }
 
 *,*::before,*::after{
@@ -15,7 +22,7 @@ body{
 
 .search{
     width: 100%;
-    height: 50px;
+    height: 5vh;
     background-color: #16274D;
 }
 
@@ -38,25 +45,81 @@ body{
 /* Global */
 .container{
     display: flex;
+    background-color: #1F2F55;
+    height: 95vh;
+}
+
+.main{
+    overflow-y: auto;
 }
 
 li{
     list-style: none;
 }
 
+
 /* SideBar */
 
 .sidebar{
-    margin-left:15px;
-    height: 100vh;
+    padding-left: 25px;
+    height: 95vh;
     min-width: 270px;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: auto 2fr 1fr;
+    background:#0E1C40;
+    color:#8391B3;
+}
+.sidebar__title{
+    border-bottom: 1px solid #152347;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight:300;
 }
 
+.sidebar__genre:first-child{
+    margin-top:1em;
+}
+.sidebar__genre{
+    margin-bottom: 1.25em;
+}
+
+.sidebar__ratings{
+    border-top: 1px solid #152347;
+    padding-top: 10px;
+    color: white;
+    font-size: 22px;
+    font-weight:300;
+}
 /* Moveis */
 
 .main{
     flex: 2;
+    padding: 50px 50px 0px 50px;
+}
+
+.movies{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie{
+    margin: 15px;
+    width: 150px ;
+}
+
+.movie__img{
+    height: auto;
+    width: 100%;
+    box-shadow: 1px 1px 6px 0px rgba(0,0,0,0.75);
+}
+
+.movie__name{
+    margin:5px 0px;
+}
+
+.movie__release{
+    color: #46567B;
 }
